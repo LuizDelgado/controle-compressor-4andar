@@ -5,7 +5,7 @@ Este projeto implementa um sistema de controle para um compressor pneumático us
 ## Pré-requisitos
 
 - Python 3.x.x
-- pip (gerenciador de pacotes Python)
+- pip (gerenciador de pacotes)
 - Acesso a um broker MQTT (como Mosquitto, HiveMQ, etc.)
 
 ## Configuração do Ambiente
