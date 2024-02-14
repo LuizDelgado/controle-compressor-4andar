@@ -1,0 +1,73 @@
+# Controle de Compressor Pneumático via MQTT
+
+Este projeto implementa um sistema de controle para um compressor pneumático usando o protocolo MQTT. Através do envio de mensagens MQTT para um broker, é possível controlar periodicamente um sistema de compressor pneumático.
+
+## Pré-requisitos
+
+- Python 3.x
+- pip (gerenciador de pacotes Python)
+- Acesso a um broker MQTT (como Mosquitto, HiveMQ, etc.)
+
+## Configuração do Ambiente
+
+### 1. Criação de Ambiente Virtual
+
+É recomendável criar um ambiente virtual para isolar as dependências do projeto. Os comandos variam conforme o sistema operacional.
+
+**Para Windows:**
+
+```bash
+python -m venv <NOME_DO_SEU_PROJETO>
+
+**Para Linux/Ubuntu:**
+
+```bash
+python3 -m venv <NOME_DO_SEU_PROJETO>
+
+Após a criação do ambiente virtual, ative-o
+
+**Windows:**
+
+bash
+<NOME_DO_SEU_PROJETO>\Scripts\activate
+
+**Linux/Ubuntu:**
+
+bash
+source <NOME_DO_SEU_PROJETO>/bin/activate
+
+### 2. Instalação de dependências
+pip install -r requirements.txt
+
+
+### Uso
+Para utilizar o código:
+
+1. Inicialize o Ambiente Virtual: Certifique-se de que o ambiente virtual esteja ativado.
+
+2. Configuração das Variáveis de Ambiente: As variáveis de ambiente necessárias devem ser definidas. Você pode fazer isso criando um arquivo .env na raiz do projeto com o seguinte conteúdo (ajuste os valores conforme necessário):
+
+.env
+BROKER=ip_do_seu_broker
+PORT=porta_do_broker
+USERNAME=seu_usuario
+PASSWORD=sua_senha
+CLIENT_ID=identificador_unico_cliente
+TOPIC=topico_para_publicacao
+MESSAGE=mensagem_para_compressor
+
+
+3. Execute o Script: Use o seguinte comando para rodar o script principal:
+python main.py
+
+
+### Expansão e Customização
+Classe MQTT: A classe definida em mqtt-class.py pode ser importada e utilizada em outros projetos. Certifique-se de incluir o arquivo no seu projeto e importá-lo adequadamente.
+
+### Personalização: Você pode modificar o arquivo main.py para ajustar a periodicidade das mensagens ou mudar a lógica de controle conforme necessário.
+
+### Contribuição
+Contribuições para o projeto são bem-vindas. Sinta-se livre para clonar, modificar e enviar pull requests.
+
+Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
